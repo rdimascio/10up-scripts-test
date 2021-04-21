@@ -1,5 +1,10 @@
 const defaultConfig = require('@10up/scripts/config/webpack.config');
 module.exports = {
 	...defaultConfig,
-	target: ['web', 'es5'],
+	output: {
+        ...defaultConfig.output,
+        environment: {
+            arrowFunction: false,
+        },
+    },
 };
